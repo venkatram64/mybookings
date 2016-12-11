@@ -25,9 +25,9 @@
 
         function getAll(){
             var url = "/bookings/all";
-            var bookingsPromise = $http.get(url);
+            //var bookingsPromise = $http.get(url);
 
-            bookingsPromise.then(function(response){
+            $http.get(url).then(function(response){
                 vm.bookings = response.data;
             });
         }
@@ -35,9 +35,9 @@
         function getAffordable() {
             var url = "/bookings/affordable/" + 100;
 
-            var bookingsPromise = $http.get(url);
+            //var bookingsPromise = $http.get(url);
 
-            bookingsPromise.then(function(response){
+            $http.get(url).then(function(response){
                 vm.bookings = response.data;
             });
         }
